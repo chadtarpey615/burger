@@ -1,26 +1,26 @@
-{{!-- <img src="https://static01.nyt.com/images/2016/08/05/us/05onfire1_xp/05onfire1_xp-superJumbo-v2.jpg" alt="image of a dog"> --}}
 
 <div class="jumbotron">
-    <h1 class="display-4">EAT DA BURGER!</h1>
     <hr class="my-4">
+    <h1 class="display-4 animate__animated animate__bounce">EAT DA BURGER!</h1>
+
     <form class="create-form">
 
         <div class="form-group">
             <label for="burger">Burger Name:</label>
             <input type="text" id="newBurger" name="name">
-            <button class="btn btn-primary" type="submit">Add Burger</button>
+            <button class="btn btn-info" type="submit">Add Burger</button>
         </div>
 
     </form>
     <div class="row">
 
         <div class="col-md-4">
-            <h2>Let's eat da burgers</h2>
+            <h2 class="animate__animated animate__bounce">Let's eat da burgers</h2>
 
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
-                {{> burger/burgers devoured=false}}
+                {{> burger/burgers devoured=true}}
 
                 {{/unless}}
                 {{/each}}
@@ -28,7 +28,7 @@
 
         </div>
         <div class="col-md-4">
-            <img src="assets/img/burger.jpeg" alt="a picture of a burger">
+            <img src="assets/img/burgers.jpeg" height="500px" alt="a picture of a burger">
         </div>
 
         <div class="col-md-4">
@@ -37,7 +37,7 @@
             <ul>
                 {{#each burgers}}
                 {{#if devoured}}
-                {{> burger/burgers-devoured devoured=true}}
+                {{> burger/burgers-devoured devoured=false}}
                 {{/if}}
                 {{/each}}
             </ul>

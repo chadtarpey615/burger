@@ -1,8 +1,15 @@
 .jumbotron {
     text-align: center;
     align-items: center;
+    background-color: wheat;
 }
 
 body {
     background-color: grey;
+}
+
+h1 {
+    font-style: oblique;
+    font-size: x-large;
+    padding-top: 50px;
 }
